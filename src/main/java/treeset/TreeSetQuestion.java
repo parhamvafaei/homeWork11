@@ -17,6 +17,7 @@ public class TreeSetQuestion {
 
     static void union(TreeSet<Character> set1 , TreeSet<Character> set2){
     set1.addAll(set2);
+
     }
 
     static void intersection(TreeSet<Character> set1 , TreeSet<Character> set2){
