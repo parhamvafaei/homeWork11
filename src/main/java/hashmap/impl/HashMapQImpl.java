@@ -9,6 +9,23 @@ public class HashMapQImpl<K,V> implements HashMapQ<K,V> {
      LinkedList<K> keys = new LinkedList<>();
      LinkedList<V> values = new LinkedList<>();
     int count;
+
+    public LinkedList<K> getKeys() {
+        return keys;
+    }
+
+    public LinkedList<V> getValues() {
+        return values;
+    }
+
+    public void setKeys(LinkedList<K> keys) {
+        this.keys = keys;
+    }
+
+    public void setValues(LinkedList<V> values) {
+        this.values = values;
+    }
+
     @Override
    public V put(K key, V value) {
         for (int i = 0; i < count; i++) {
@@ -42,7 +59,7 @@ public class HashMapQImpl<K,V> implements HashMapQ<K,V> {
     }
 
    static void print(HashMapQImpl<Integer,String> hashMapQ){
-        for (String s:hashMapQ.values) {
+        for (String s:hashMapQ.getValues()) {
             System.out.println(s);
         }
     }
