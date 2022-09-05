@@ -3,7 +3,7 @@ package treeset;
 import java.util.Random;
 import java.util.TreeSet;
 
-public class TreeSetQuestion {
+public class TreeSetQ {
 
 
     public static TreeSet<Character> random() {
