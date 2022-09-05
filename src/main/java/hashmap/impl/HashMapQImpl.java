@@ -2,6 +2,7 @@ package hashmap.impl;
 
 import hashmap.HashMapQ;
 
+
 import java.util.LinkedList;
 
 public class HashMapQImpl<K,V> implements HashMapQ<K,V> {
@@ -34,7 +35,7 @@ public class HashMapQImpl<K,V> implements HashMapQ<K,V> {
     public boolean replace(K key, V newValue) {
         if (keys.contains(key)) {
 
-            values.set(keys.indexOf(keys.contains(key)), newValue);
+            values.set(keys.indexOf(key), newValue);
             return true;
         }
         return false;
@@ -63,6 +64,14 @@ public class HashMapQImpl<K,V> implements HashMapQ<K,V> {
     public static void main(String[] args) {
         HashMapQImpl<Integer, String> hashMap = new HashMapQImpl<>();
         hashMap.put(1,"df");
+        hashMap.put(2,"fyh");
+        hashMap.put(3,"srhh");
+        hashMap.put(4,"nentn");
+        hashMap.put(5,"srgr");
      print(hashMap);
+        System.out.println(hashMap.containKey(2)) ;
+        System.out.println(hashMap.isEmpty());
+        System.out.println(hashMap.replace(4,"srgr"));
+
     }
 }
