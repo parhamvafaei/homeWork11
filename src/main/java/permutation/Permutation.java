@@ -5,6 +5,11 @@ import java.util.HashMap;
 public class Permutation {
     int count=0;
     HashMap<Integer,String> memory=new HashMap<>();
+
+    public HashMap<Integer, String> getMemory() {
+        return memory;
+    }
+
     public HashMap<Integer, String> permutation(String input) {
         HashMap<Integer, String> hashMap = new HashMap<>();
         char first = input.charAt(0);
