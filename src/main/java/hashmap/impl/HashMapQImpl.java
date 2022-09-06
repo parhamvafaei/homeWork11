@@ -7,36 +7,18 @@ import java.util.ArrayList;
 
 
 public class HashMapQImpl<K, V> implements HashMapQ<K, V> {
+   static HashMapQImpl<Integer, String> hashMap = new HashMapQImpl<>();
     ArrayList<K> keys = new ArrayList<>();
     ArrayList<V> values = new ArrayList<>();
     int count;
 
-    public ArrayList<K> getKeys() {
-        return keys;
-    }
-
-    public ArrayList<V> getValues() {
-        return values;
-    }
-
-    public void setKeys(ArrayList<K> keys) {
-        this.keys = keys;
-    }
-
-    public void setValues(ArrayList<V> values) {
-        this.values = values;
-    }
 
     @Override
     public Boolean put(K key, V value) {
-        for (int i = 0; i < count; i++) {
+        if (!(containKey(key))) {
 
-            if (keys.get(i) == key) {
-                System.out.println("the key already exist !");
-                return false;
-            }
-            keys.set(count, key);
-            values.set(count++, value);
+            this.keys.add(count, key);
+            this.values.add(count++, value);
         }
         return true;
     }
@@ -53,13 +35,9 @@ public class HashMapQImpl<K, V> implements HashMapQ<K, V> {
 
     @Override
     public void print() {
-        HashMapQImpl<Integer, String> hashMapQ = new HashMapQImpl<>();
-        for (Integer i : hashMapQ.getKeys()) {
-            System.out.println(i);
-        }
-        for (String s : hashMapQ.getValues()) {
-            System.out.println(s);
-        }
+        System.out.println(keys);
+        System.out.println(values);
+
     }
 
     @Override
@@ -76,19 +54,9 @@ public class HashMapQImpl<K, V> implements HashMapQ<K, V> {
 
     }
 
-    @Override
-    public String toString() {
-        System.out.println(keys);
-        System.out.println(values);
-        return "HashMapQImpl{" +
-                "keys=" + keys +
-                ", values=" + values +
-
-                '}';
-    }
 
     public static void main(String[] args) {
-        HashMapQImpl<Integer, String> hashMap = new HashMapQImpl<>();
+
         hashMap.put(1, "df");
         hashMap.put(2, "fyh");
         hashMap.put(3, "srhh");

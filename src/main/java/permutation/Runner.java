@@ -21,7 +21,8 @@ public class Runner  {
         HashMap<Integer, String> cases = permutation.permutation(input);
         Permutation.print(cases);
 
-        System.out.println("pass!\nwanna go !\n 1-yes\n 2-no");
+        System.out.println("pass!\nwanna go !\n 1-yes\n 2-no"+
+                "choice 1 or 2!");
         input = scanner.next().toLowerCase();
         if (input.equals(String.valueOf(1))) {
             start();
