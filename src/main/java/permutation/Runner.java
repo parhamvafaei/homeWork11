@@ -22,7 +22,7 @@ public class Runner  {
         Permutation.print(cases);
 
         System.out.println("pass!\nwanna go !\n 1-yes\n 2-no"+
-                "choice 1 or 2!");
+                "\n choice 1 or 2!");
         input = scanner.next().toLowerCase();
         if (input.equals(String.valueOf(1))) {
             start();
