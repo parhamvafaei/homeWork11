@@ -18,8 +18,7 @@ public class ArrayListQ {
                     i -= 2;
                 }
             }
-        } else
-            return arrayList;
+        }
 
         return arrayList;
     }
